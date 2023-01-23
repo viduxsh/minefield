@@ -205,10 +205,8 @@ public class Main extends JFrame{
         start.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(difficulty != "" && length != 0 && height != 0){
-                    System.out.println("Start game: h" + height + ", l" + length + " d" + difficulty + " l" + lifes + " h" + hints);
                     Board game = new Board(height, length, difficulty, lifes, hints);
                     game.init();
-                    game.print();
                     game.play();
                 }
                 else if(difficulty == ""){
